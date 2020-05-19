@@ -5,7 +5,7 @@ const port = 8000;
 const app = express();
 
 // db config
-// const db = require("./config/mongoose");
+const db = require("./config/mongoose");
 
 
 // parse requests of content type
@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 // app.use('/', require("./routes"));
 
 // Defining a simple route
-// app.get('/', (req, res) => {
-//     res.json({"message": "welcome guys" });
-// });
+app.get('/', (req, res) => {
+    res.json({"message": "welcome guys" });
+});
 
 
 // Listen for requests
